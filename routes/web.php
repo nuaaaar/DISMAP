@@ -15,3 +15,7 @@ Route::get('/dismap/maps', 'PagesController@index');
 
 Route::get('/dismap/data-tower', 'PagesController@towerIndex');
 Route::post('/dismap/data-tower/add', 'DataController@towerStore');
+Route::get('/dismap/data-tower/edit/{id}', 'DataController@towerEdit');
+Route::post('/dismap/data-tower/edit/{id}', 'DataController@towerUpdate');
+Route::get('/dismap/data-tower/view/{id}', 'DataController@towerView');
+Route::get('/dismap/data-tower/delete/{id}', 'DataController@towerDestroy');
