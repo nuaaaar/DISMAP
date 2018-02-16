@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/dismap/maps', 'PagesController@index');
+
+Route::get('/dismap/data-tower', 'PagesController@towerIndex');
+Route::post('/dismap/data-tower/add', 'DataController@towerStore');
