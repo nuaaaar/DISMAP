@@ -286,11 +286,11 @@
                     </div>
                     <div class="row">
                         <label class="col-md-3  col-xs-6 control-label">Site ID <span class="pull-right">:</span></label>
-                        <label class="col-md-3  col-xs-6">
+                        <label class="col-md-9  col-xs-6">
                             <span name="view_siteid" id="view_siteid"></span>
                         </label>
                         <label class="col-md-3  col-xs-6 control-label">Site Name <span class="pull-right">:</span></label>
-                        <label class="col-md-3  col-xs-6">
+                        <label class="col-md-9  col-xs-6">
                             <span name="view_sitename" id="view_sitename"></span>
                         </label>
                     </div>
@@ -320,11 +320,11 @@
                     </div>
                     <div class="row">
                         <label class="col-md-3 col-xs-6 control-label">Latitude <span class="pull-right">:</span></label>
-                        <label class="col-md-3 col-xs-6">
+                        <label class="col-md-9 col-xs-6">
                             <span name="view_latitude" id="view_latitude">
                         </label>
                         <label class="col-md-3 col-xs-6 control-label">Longitude <span class="pull-right">:</span></label>
-                        <label class="col-md-3 col-xs-6">
+                        <label class="col-md-9 col-xs-6">
                             <span name="view_longitude" id="view_longitude"></span>
                         </label>
                     </div>
