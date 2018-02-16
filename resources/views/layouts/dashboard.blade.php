@@ -48,7 +48,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="/logout">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -64,7 +64,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
 
               	  <p class="centered"><a href="profile.html"><img src="{{ asset('assets/img/ui-sam.jpg')}}" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Nama User Yang Sedang Login</h5>
+              	  <h5 class="centered">{{ Auth::user()->username }}</h5>
                   <li class="mt">
                       <a class="@yield('maps')" href="/dismap/maps">
                           <i class="fa fa-map"></i>
