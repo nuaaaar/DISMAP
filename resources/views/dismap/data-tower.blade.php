@@ -28,14 +28,14 @@
                                 <th data-priority="2">DATA PENGELOLA MENARA TELEKOMUNIKASI</th>
                                 <th data-priority="1">SITE ID / SITE NAME</th>
                                 <th data-priority="2">JENIS MENARA</th>
-                                <th data-priority="3">LOKASI MENARA</th>
+                                <th data-priority="2">LOKASI MENARA</th>
                                 <th data-priority="2">LUAS LOKASI</th>
                                 <th data-priority="2">STATUS LOKASI</th>
                                 <th data-priority="2">KOORDINAT</th>
                                 <th data-priority="2">TINGGI MENARA</th>
                                 <th data-priority="2">STATUS KUNJUNGAN</th>
                                 <th data-priority="2">KETERANGAN</th>
-                                <th data-priority="2">Action</th>
+                                <th data-priority="3">Action</th>
                             </tr>
                         </thead>
                         <tbody>
