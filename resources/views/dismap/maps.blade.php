@@ -6,15 +6,19 @@
     
 @endsection
 
+@section('maps', 'active')
+
 @section('content')
-    <section class="panel">
-        <header class="panel-heading">
-            <h3 class="text-center">DISKOMINFO MAP</h3> // title
-        </header>
-        <div class="panel-body">
-            <div class="gmap-list"></div> // map
-        </div>
-    </section>
+    <div class="showback">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="text-center">DISKOMINFO MAP</h3> 
+            </header>
+            <div class="panel-body">
+                <div class="gmap-list"></div> Map
+            </div>
+        </section>
+    </div>
 @endsection
 
 @section('script')

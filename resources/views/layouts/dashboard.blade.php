@@ -66,13 +66,13 @@
               	  <p class="centered"><a href="profile.html"><img src="{{ asset('assets/img/ui-sam.jpg')}}" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Nama User Yang Sedang Login</h5>
                   <li class="mt">
-                      <a class="active" href="/dismap/maps">
+                      <a class="@yield('maps')" href="/dismap/maps">
                           <i class="fa fa-map"></i>
                           <span>Maps</span>
                       </a>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="@yield('data')" href="javascript:;" >
                           <i class="fa fa-table"></i>
                           <span>Data list</span>
                       </a>

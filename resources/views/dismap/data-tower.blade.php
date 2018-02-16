@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-colvis-1.5.1/b-flash-1.5.1/b-html5-1.5.1/b-print-1.5.1/r-2.2.1/datatables.min.css"/>
 @endsection
 
+@section('data', 'active')
+
 @section('content')
     <div class="showback">
         <section class="panel">
@@ -65,7 +67,6 @@
             </div>
         </section>
     </div>
-    <!-- Modal -->
     <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -163,6 +164,7 @@
             </div>
         </div>
     </div>      				    
+    <!-- Modal -->
 @endsection
 
 @section('script')
