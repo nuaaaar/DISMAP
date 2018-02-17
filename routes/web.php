@@ -19,7 +19,7 @@ Route::post('/login', 'Auth\LoginController@Authenticate');
 
 Route::group(['middleware'=>'auth'], function(){
     Route::get('/dismap/maps', 'PagesController@index');
-    
+
     Route::get('/dismap/data-tower', 'PagesController@towerIndex');
     Route::post('/dismap/data-tower/add', 'DataController@towerStore');
     Route::get('/dismap/data-tower/edit/{id}', 'DataController@towerEdit');
@@ -28,4 +28,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/dismap/data-tower/delete/{id}', 'DataController@towerDestroy');
 
     Route::get('/logout', 'Auth\LoginController@logout');
+
+    Route::get('/admin/do/ajax/get/maps', 'MapsController@getMaps');
+    Route::get('/admin/do/ajax/get/maps/detail/{id}', 'MapsController@getDetailMap');
 });

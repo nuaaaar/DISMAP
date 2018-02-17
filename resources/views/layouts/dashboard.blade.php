@@ -12,6 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <!--external css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/zabuto_calendar.css')}} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/lineicons/style.css') }}">
@@ -98,14 +99,14 @@
                     @yield('content')
                 </div>
             </div>
-          
+
       </section><! --/wrapper -->
     </section><!-- /MAIN CONTENT -->
       <!--main content end-->
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-             <b>Made with <i class="fa fa-heart text-danger"></i> By B2 @ Diskominfo Balikpapan 2018</b> 
+             <b>Made with <i class="fa fa-heart text-danger"></i> By B2 @ Diskominfo Balikpapan 2018</b>
               <a href="index.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
@@ -130,7 +131,7 @@
 
     <script src="{{ asset('assets/js/sparkline-chart.js') }}"></script>
 	<script src="{{ asset('assets/js/zabuto_calendar.js') }}"></script>
-    
+
 	<script type="application/javascript">
         $(document).ready(function () {
             $("#date-popover").popover({html: true, trigger: "manual"});
@@ -165,6 +166,14 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
+
+    <!-- gmap -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6p7lsEBaAyLbbbusEauYz-_xoQNbCSeg" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
+
+    <!-- NProgress.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.js"></script>
+
     @yield('script')
 
   </body>

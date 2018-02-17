@@ -13,7 +13,7 @@
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <!--external css-->
     <link href="{{ asset('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
-        
+
     <!-- Custom styles for this template -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style-responsive.css') }}" rel="stylesheet">
@@ -32,7 +32,7 @@
       *********************************************************************************************************************************************************** -->
 
 	  <div id="login-page">
-	  	<div class="container"> 	
+	  	<div class="container">
             <form class="form-login" action="" method="POST">
                 <h2 class="form-login-heading">sign in now</h2>
                 <div class="login-wrap">
@@ -53,7 +53,7 @@
                     </label>
                     <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
                 </div>
-            </form>	  	
+            </form>
 	  	</div>
 	  </div>
 
