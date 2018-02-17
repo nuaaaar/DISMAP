@@ -18,14 +18,13 @@ $(window).on("load", function(){
     method: "GET",
     url: "/admin/do/ajax/get/maps",
   }).done(function(res){
-    console.log(res);
 
     for (var i = 0; i < res.length; i++) {
 
       if (res[i].status_kunjungan == "sudah dikunjungi") {
 
         var icons = {
-          url: window.location.origin + "/img/hijau.png", // url
+          url: window.location.origin + "/img/Marker-green.png", // url
           scaledSize: new google.maps.Size(24, 24), // scaled sizenya
           origin: new google.maps.Point(0, 0), // originnya
           anchor: new google.maps.Point(12, 24), // anchor / Rumus = point(size dibagi 2, ngikut size)
@@ -39,7 +38,7 @@ $(window).on("load", function(){
           click: function(e) {
 
             NProgress.start(); // Buat mulai loadingnya
-
+            
             $.ajax({
               method: "GET",
               url: "/admin/do/ajax/get/maps/detail/" + e.title
@@ -72,7 +71,7 @@ $(window).on("load", function(){
       } else if (res[i].status_kunjungan == "belum dikunjungi") {
 
         var icons = {
-          url: window.location.origin + "/img/merah.png", // url
+          url: window.location.origin + "/img/Marker-red.png", // url
           scaledSize: new google.maps.Size(24, 24), // scaled sizenya
           origin: new google.maps.Point(0, 0), // originnya
           anchor: new google.maps.Point(12, 24), // anchor / Rumus = point(size dibagi 2, ngikut size)
