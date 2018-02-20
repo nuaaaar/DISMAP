@@ -17,12 +17,12 @@
             @if (session()->has('status'))
                 <div class="alert alert-success">
                     <button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Notification </strong> {{ session('status') }}
+                    <strong>Success ! </strong> {{ session('status') }}
                 </div>
             @elseif (session()->has('destroy'))
                 <div class="alert alert-danger">
                     <button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Notification </strong> {{ session('destroy') }}
+                    <strong>Error ! </strong> {{ session('destroy') }}
                 </div>
             @endif
             <div class="panel-body">
@@ -87,7 +87,18 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Pengelola <span class="pull-right">:</span></label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="add_pengelola" id="add_pengelola">
+                                <select class="form-control" name="add_pengelola" id="add_pengelola">
+                                    <option value="TELKOMSEL">TELKOMSEL</option>
+                                    <option value="INDOSAT">INDOSAT</option>
+                                    <option value="TRI">TRI</option>
+                                    <option value="XL Axiata">XL Axiata</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">No. Registrasi <span class="pull-right">:</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="add_noreg" id="add_noreg">
                             </div>
                         </div>
                         <div class="form-group">
@@ -106,6 +117,7 @@
                                 <select class="form-control" name="add_jenismenara" id="add_jenismenara">
                                     <option value="green field">Green Field</option>
                                     <option value="roof top">Roof Top</option>
+                                    <option value="mono pole">Mono Pole</option>
                                 </select>
                             </div>
                         </div>
@@ -185,7 +197,18 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Pengelola <span class="pull-right">:</span></label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text" name="edit_pengelola" id="edit_pengelola">
+                                <select class="form-control" name="edit_pengelola" id="edit_pengelola">
+                                    <option value="TELKOMSEL">TELKOMSEL</option>
+                                    <option value="INDOSAT">INDOSAT</option>
+                                    <option value="TRI">TRI</option>
+                                    <option value="XL Axiata">XL Axiata</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">No. Registrasi <span class="pull-right">:</span></label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="edit_noreg" id="edit_noreg">
                             </div>
                         </div>
                         <div class="form-group">
@@ -204,6 +227,7 @@
                                 <select class="form-control" name="edit_jenismenara" id="edit_jenismenara">
                                     <option value="green field">Green Field</option>
                                     <option value="roof top">Roof Top</option>
+                                    <option value="mono pole">Mono Pole</option>
                                 </select>
                             </div>
                         </div>
@@ -282,6 +306,12 @@
                         <label class="col-md-3 col-xs-6 control-label">Pengelola <span class="pull-right">:</span></label>
                         <label class="col-md-9 col-xs-6">
                             <span name="view_pengelola" id="view_pengelola"></span>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="col-md-3 col-xs-6 control-label">No. Registrasi <span class="pull-right">:</span></label>
+                        <label class="col-md-9 col-xs-6">
+                            <span name="view_noreg" id="view_noreg"></span>
                         </label>
                     </div>
                     <div class="row">
@@ -387,7 +417,7 @@
                 targets: [4, 7],
                 render: function ( data, type, row ) {
                     return data.substr( 0, 20 )+ '...';
-                }
+                },
             }],
         });
         
@@ -401,6 +431,7 @@
                 $('#editForm').attr('action', '/dismap/data-tower/edit/' + id);
                 
                 $('#edit_pengelola').val(data.pengelola);
+                $('#edit_noreg').val(data.noreg);
                 $('#edit_siteid').val(site[0]);
                 $('#edit_sitename').val(site[1]);
                 $('#edit_jenismenara option[value="' + data.jenis_menara + '"]').attr("selected",true);
@@ -424,6 +455,7 @@
                 var site = data.site.split(" / ");
 
                 $('#view_pengelola').text(data.pengelola);
+                $('#view_noreg').text(data.noreg);
                 $('#view_siteid').text(site[0]);
                 $('#view_sitename').text(site[1]);
                 $('#view_jenismenara').text(data.jenis_menara);

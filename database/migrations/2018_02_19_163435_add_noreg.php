@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddStatusKunjunganToTowerTable extends Migration
+class AddNoreg extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddStatusKunjunganToTowerTable extends Migration
      */
     public function up()
     {
-        Schema::table('tower', function (Blueprint $table)
-        {
-            $table->string('status_kunjungan')->after('tinggi_menara')->nullable();
+        Schema::table('tower', function (Blueprint $table) {
+            $table->string('noreg')->after('pengelola')->nullable();
         });
     }
 
@@ -26,6 +25,8 @@ class AddStatusKunjunganToTowerTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('tower', function (Blueprint $table) {
+            //
+        });
     }
 }

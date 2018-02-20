@@ -15,16 +15,26 @@ class DataController extends Controller
 
     public function towerStore(Request $request){
         $data = $request->all();
+        $latitude = str_replace(',', '.', $data['add_latitude']);
+        $longitude = str_replace(',' , '.', $data['add_longitude']);
+
+        if($data['add_keterangan'] == null){
+            $data['add_keterangan'] = '-';
+        };
+        if($data['add_luaslokasi'] == null){
+            $data['add_luaslokasi'] = '-';
+        };
 
         Tower::create([
             'pengelola' => $data['add_pengelola'],
+            'noreg' => $data['add_noreg'],
             'site' => $data['add_siteid']. ' / ' .$data['add_sitename'],
             'jenis_menara' => $data['add_jenismenara'],
             'lokasi_menara' => $data['add_lokasimenara'],
             'luas_lokasi' => $data['add_luaslokasi'],
             'status_lokasi' => $data['add_statuslokasi'],
-            'lat' => $data['add_latitude'],
-            'lng' => $data['add_longitude'],
+            'lat' => $latitude,
+            'lng' => $longitude,
             'tinggi_menara' => $data['add_tinggimenara'],
             'status_kunjungan' => $data['add_statuskunjungan'],
             'keterangan' => $data['add_keterangan']
@@ -45,6 +55,7 @@ class DataController extends Controller
 
         Tower::where('id', $id)->update([
             'pengelola' => $data['edit_pengelola'],
+            'noreg' => $data['edit_noreg'],
             'site' => $data['edit_siteid']. ' / ' .$data['edit_sitename'],
             'jenis_menara' => $data['edit_jenismenara'],
             'lokasi_menara' => $data['edit_lokasimenara'],

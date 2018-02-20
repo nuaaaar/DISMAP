@@ -13,7 +13,7 @@
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <!--external css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" />
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/zabuto_calendar.css')}} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/lineicons/style.css') }}">
 
@@ -43,7 +43,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>DISMAP</b></a>
+            <a href="/dismap/maps" class="logo"><b>DISMAP</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
             </div>
@@ -64,7 +64,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-              	  <p class="centered"><a href="profile.html"><img src="{{ asset('assets/img/ui-sam.jpg')}}" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href="/dismap/maps"><img src="{{ asset('assets/img/ui-sam.jpg')}}" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">{{ Auth::user()->username }}</h5>
                   <li class="mt">
                       <a class="@yield('maps')" href="/dismap/maps">
@@ -107,7 +107,7 @@
       <footer class="site-footer">
           <div class="text-center">
              <b>Made with <i class="fa fa-heart text-danger"></i> By B2 @ Diskominfo Balikpapan 2018</b>
-              <a href="index.html#" class="go-top">
+              <a href="#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
