@@ -42,6 +42,13 @@
         </div>
 
         <div class="row">
+          <label class="col-md-3 col-xs-6 control-label">No. Register <span class="pull-right">:</span></label>
+          <label class="col-md-9 col-xs-6">
+            <span name="view_noreg" id="view_noreg"></span>
+          </label>
+        </div>
+
+        <div class="row">
           <label class="col-md-3  col-xs-6 control-label">Site ID <span class="pull-right">:</span></label>
           <label class="col-md-9  col-xs-6">
             <span name="view_siteid" id="view_siteid"></span>

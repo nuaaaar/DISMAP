@@ -49,6 +49,7 @@ $(window).on("load", function(){
               var site = res.site.split(" / ");
 
               $('#view_pengelola').text(res.pengelola);
+              $('#view_noreg').text(res.noreg);
               $('#view_siteid').text(site[0]);
               $('#view_sitename').text(site[1]);
               $('#view_jenismenara').text(res.jenis_menara);
@@ -96,6 +97,7 @@ $(window).on("load", function(){
               var site = res.site.split(" / ");
 
               $('#view_pengelola').text(res.pengelola);
+              $('#view_noreg').text(res.noreg);
               $('#view_siteid').text(site[0]);
               $('#view_sitename').text(site[1]);
               $('#view_jenismenara').text(res.jenis_menara);
@@ -143,6 +145,7 @@ $(window).on("load", function(){
               var site = res.site.split(" / ");
 
               $('#view_pengelola').text(res.pengelola);
+              $('#view_noreg').text(res.noreg);
               $('#view_siteid').text(site[0]);
               $('#view_sitename').text(site[1]);
               $('#view_jenismenara').text(res.jenis_menara);
@@ -190,6 +193,7 @@ $(window).on("load", function(){
               var site = res.site.split(" / ");
 
               $('#view_pengelola').text(res.pengelola);
+              $('#view_noreg').text(res.noreg);
               $('#view_siteid').text(site[0]);
               $('#view_sitename').text(site[1]);
               $('#view_jenismenara').text(res.jenis_menara);
