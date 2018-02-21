@@ -39,7 +39,7 @@ class DataController extends Controller
             'status_kunjungan' => $data['add_statuskunjungan'],
             'keterangan' => $data['add_keterangan']
         ]);
-        session()->flash('status', 'Sukses menambah data !');
+        session()->flash('status', 'Berhasil menambah data !');
 
         return redirect()->back();
     }
@@ -67,13 +67,13 @@ class DataController extends Controller
             'status_kunjungan' => $data['edit_statuskunjungan'],
             'keterangan' => $data['edit_keterangan']
         ]);
-        session()->flash('status', 'Sukses mengupdate data !');
+        session()->flash('status', 'Berhasil mengupdate data !');
 
         return redirect()->back();
     }
     public function towerDestroy($id){
         Tower::where('id', $id)->delete();
-        session()->flash('destroyed', 'Sukses menghapus data !');
+        session()->flash('destroyed', 'Berhasil menghapus data !');
 
         return redirect()->back();
     }
